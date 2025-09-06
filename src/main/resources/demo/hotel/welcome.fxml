@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="controller.WelcomeController"
+             prefHeight="600" prefWidth="800" style="-fx-background-color: #f8f1e5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+
+
+    <Button fx:id="adminLoginBtn" onAction="#handleAdminLogin"
+            layoutX="680" layoutY="20"
+            style="-fx-background-color: transparent; -fx-text-fill: #444;"
+            text="🔒 Admin Login" />
+
+    <VBox alignment="CENTER" layoutX="200" layoutY="100" prefWidth="400" spacing="20">
+
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Welcome to Hotel Tehran" />
+
+        <Label style="-fx-font-size: 14px; -fx-text-fill: #333;" text="Book your room quickly and safely with our self-service system." textAlignment="CENTER" wrapText="true" />
+
+
+        <ImageView fitHeight="150" fitWidth="183.0">
+         <image>
+            <Image url="@images/hotel.jpg"/>
+         </image></ImageView>
+
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="makeBookingBtn" prefWidth="150" style="-fx-background-color: linear-gradient(#fceabb, #f8b500); -fx-font-size: 14px; -fx-font-weight: bold;" text="Make Booking" onAction="#handleMakeBooking" />
+            <Button fx:id="feedbackBtn" prefWidth="150" style="-fx-background-color: linear-gradient(#d3d3d3, #aaaaaa); -fx-font-size: 14px; -fx-font-weight: bold;" text="Leave Feedback" onAction="#handleLeaveFeedback"/>
+        </HBox>
+
+        <Hyperlink fx:id="rulesLink" style="-fx-text-fill: #555; -fx-underline: true;" text="View Rules and Regulations" onAction="#handleShowRules" />
+
+    </VBox>
+
+</AnchorPane>

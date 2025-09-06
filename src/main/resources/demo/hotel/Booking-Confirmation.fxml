@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:controller="controller.BookingConfirmationController" xmlns:fx="http://javafx.com/fxml" prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f8f1e5;">
+
+
+    <Label layoutX="300" layoutY="30" text="Confirm Your Booking"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2e4053;" />
+
+
+    <VBox layoutX="60" layoutY="80" spacing="10">
+        <Label fx:id="checkInLabel" text="Check-in Date: July 22, 2025" />
+        <Label fx:id="checkOutLabel" text="Check-out Date: July 27, 2025" />
+        <Label fx:id="guestCountLabel" text="Number of Guests: 2" />
+        <Label fx:id="roomTypeLabel" text="Room Type: Deluxe Suite" />
+        <Label fx:id="roomCountLabel" text="Rooms Booked: 1" />
+    </VBox>
+
+
+    <TableView fx:id="billingTable" layoutX="60" layoutY="220" prefWidth="680" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="100"/>
+            <TableColumn fx:id="descCol" text="Description" prefWidth="280"/>
+            <TableColumn fx:id="unitPriceCol" text="Unit Price" prefWidth="150"/>
+            <TableColumn fx:id="amountCol" text="Amount" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+
+    <VBox layoutX="540" layoutY="440" spacing="6" alignment="TOP_RIGHT" prefWidth="200">
+        <Label fx:id="subtotalLabel" text="Subtotal: $850.00" />
+        <Label fx:id="taxLabel" text="Tax (9%): $76.50" />
+        <Label fx:id="totalLabel" text="Total: $926.50"
+               style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+    </VBox>
+
+
+    <HBox spacing="20" layoutX="250" layoutY="520">
+        <Button text="Back" prefWidth="120"
+                style="-fx-background-color: #b0bec5; -fx-text-fill: white;" onAction="#handleBack"/>
+        <Button text="Confirm Booking" prefWidth="160"
+                style="-fx-background-color: #388e3c; -fx-text-fill: white;" onAction="#handleConfirm"/>
+    </HBox>
+
+</AnchorPane>

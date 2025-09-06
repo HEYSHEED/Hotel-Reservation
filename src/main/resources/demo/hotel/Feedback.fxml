@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane fx:controller="controller.FeedbackController" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/8"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #fdf6e3;">
+
+    <VBox layoutX="180" layoutY="40" spacing="15" alignment="CENTER"
+          style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);"
+          prefWidth="440">
+
+        <Label text="We Value Your Feedback"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2e2e2e;" />
+
+        <Label text="Please share your experience with us:"
+               style="-fx-font-size: 14px; -fx-text-fill: #444;" />
+
+        <TextField fx:id="nameField" promptText="Your Name" prefWidth="300"/>
+        <TextField fx:id="phoneField" promptText="Mobile Number" prefWidth="300"/>
+
+        <TextArea fx:id="feedbackArea"
+                  promptText="Write your feedback here..."
+                  prefWidth="300" prefHeight="120"
+                  wrapText="true"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Rating:" style="-fx-font-size: 14px;" />
+            <ComboBox fx:id="ratingComboBox" prefWidth="80">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1" />
+                        <String fx:value="2" />
+                        <String fx:value="3" />
+                        <String fx:value="4" />
+                        <String fx:value="5" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+    </VBox>
+
+    <!-- دکمه‌ها پایین وسط -->
+    <HBox layoutX="0" layoutY="440" alignment="CENTER" prefWidth="800" spacing="20">
+        <Button fx:id="backBtn" text="Back"
+                prefWidth="120"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-background-radius: 6;" onAction="#handleBack"/>
+        <Button fx:id="submitBtn" text="Submit Feedback"
+                prefWidth="150"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 6;" onAction="#handleSubmit" />
+    </HBox>
+
+</AnchorPane>

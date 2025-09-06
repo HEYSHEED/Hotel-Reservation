@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            fx:controller="controller.GuestsDetailsController"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f8f1e5;">
+
+    <VBox alignment="TOP_CENTER" spacing="20" layoutX="200" layoutY="60" prefWidth="400">
+
+        <Label text="Guest Details" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <VBox spacing="10">
+            <Label text="Full Name *" />
+            <TextField fx:id="nameField" promptText="e.g. John Doe" />
+        </VBox>
+
+        <VBox spacing="10">
+            <Label text="Phone Number *" />
+            <TextField fx:id="phoneField" promptText="e.g. +1234567890" />
+        </VBox>
+
+        <VBox spacing="10">
+            <Label text="Email Address *" />
+            <TextField fx:id="emailField" promptText="e.g. john@example.com" />
+        </VBox>
+
+        <VBox spacing="10">
+            <Label text="Address" />
+            <TextArea fx:id="addressField" prefRowCount="3" wrapText="true" />
+        </VBox>
+
+        <HBox spacing="40" alignment="CENTER">
+            <Button fx:id="backButton" text="Back" prefWidth="120" style="-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-background-radius: 6;" onAction="#handleBack"/>
+            <Button fx:id="continueButton" text="Continue" prefWidth="120" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 6;" onAction="#handleContinue"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

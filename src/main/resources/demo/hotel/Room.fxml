@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:controller="controller.RoomController" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f8f1e5;">
+
+
+    <VBox layoutX="150" layoutY="40" spacing="10" alignment="CENTER"
+          style="-fx-background-color: #ffffff; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 8, 0, 0, 3);"
+          prefWidth="500">
+
+        <Label text="Available Room Suggestions"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #3e3e3e;" />
+    </VBox>
+
+
+    <TableView fx:id="roomTable" layoutX="100" layoutY="140" prefWidth="600" prefHeight="300"
+               style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+        <columns>
+            <TableColumn fx:id="roomTypeCol" text="Room Type" prefWidth="180" />
+            <TableColumn fx:id="capacityCol" text="Capacity" prefWidth="120" />
+            <TableColumn fx:id="priceCol" text="Price per Night" prefWidth="160" />
+            <TableColumn fx:id="selectCol" text="Select" prefWidth="100" />
+        </columns>
+    </TableView>
+
+
+    <HBox spacing="30" layoutX="250" layoutY="500" alignment="CENTER">
+        <Button fx:id="backButton" text="Back"
+                style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 8;"
+                prefWidth="120" onAction="#handleBack"/>
+
+        <Button fx:id="continueButton" text="Continue"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 8;"
+                prefWidth="120" onAction="#handleContinue"/>
+    </HBox>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="controller.CancelReservationController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #fdf6e3;">
+
+
+    <VBox layoutX="180" layoutY="20" spacing="15" alignment="CENTER"
+          style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);"
+          prefWidth="440">
+
+        <Label text="Cancel Reservation"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2e2e2e;" />
+
+        <Label text="Enter guest name or phone number:"
+               style="-fx-font-size: 14px; -fx-text-fill: #444;" />
+
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="searchField" promptText="Name or Phone" prefWidth="220" />
+            <Button text="Search"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 8;" onAction="#handleSearch"/>
+        </HBox>
+    </VBox>
+
+
+    <TableView fx:id="reservationTable"
+               layoutX="100" layoutY="190"
+               prefWidth="600" prefHeight="220"
+               style="-fx-background-radius: 8;">
+
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Guest Name" prefWidth="130"/>
+            <TableColumn fx:id="roomColumn" text="Room Type" prefWidth="120"/>
+            <TableColumn fx:id="checkInColumn" text="Check-In" prefWidth="100"/>
+            <TableColumn fx:id="checkOutColumn" text="Check-Out" prefWidth="100"/>
+            <TableColumn fx:id="actionColumn" text="Action" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+
+    <HBox layoutX="0" layoutY="440" alignment="CENTER" prefWidth="800">
+        <Button text="Back"
+                prefWidth="120"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-background-radius: 6;" onAction="#handleBack"/>
+    </HBox>
+
+</AnchorPane>

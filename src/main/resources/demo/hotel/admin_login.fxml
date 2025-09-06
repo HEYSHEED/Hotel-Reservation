@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AdminLoginController" prefWidth="800" prefHeight="500">
+
+    <HBox prefWidth="800" prefHeight="500">
+        <VBox prefWidth="320" alignment="CENTER" spacing="12"
+              style="-fx-background-color: #2e2e2e;">
+            <Label text="Hotel Tehran" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+            <Label text="Luxury AND Comfort" style="-fx-text-fill: lightgray;" />
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="15" prefWidth="470"
+              style="-fx-background-color: #f8f1e5;">
+            <Label text="Admin Login" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+            <TextField fx:id="usernameField" promptText="Username"
+                       prefWidth="220"
+                       style="-fx-background-radius: 6; -fx-padding: 6;" />
+
+            <PasswordField fx:id="passwordField" promptText="Password"
+                           prefWidth="220"
+                           style="-fx-background-radius: 6; -fx-padding: 6;" />
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="loginButton" text="Login"
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 6;"
+                        prefWidth="100" onAction="#handleLogin"/>
+                <Button fx:id="cancelButton" text="Cancel"
+                        onAction="#handleCancel"
+                        style="-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-background-radius: 6;"
+                        prefWidth="100" />
+            </HBox>
+            <Hyperlink text="Forgot password?" fx:id="forgotPasswordLink"
+                       onAction="#handleForgotPassword"
+                       style="-fx-text-fill: #777;" />
+
+        </VBox>
+
+    </HBox>
+</AnchorPane>

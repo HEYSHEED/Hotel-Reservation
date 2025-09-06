@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:controller="controller.AdminFeedbackController" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/8"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #fdf6e3;">
+
+    <VBox layoutX="150" layoutY="50" spacing="20" alignment="CENTER"
+          style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);"
+          prefWidth="500">
+
+        <Label text="Guest Feedback"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2e2e2e;" />
+
+        <TableView fx:id="feedbackTable" prefHeight="300" prefWidth="460">
+            <columns>
+                <TableColumn fx:id="guestNameColumn" text="Guest Name" prefWidth="150" />
+                <TableColumn fx:id="ratingColumn" text="Rating" prefWidth="80" />
+                <TableColumn fx:id="commentColumn" text="Comment" prefWidth="230" />
+            </columns>
+        </TableView>
+
+    </VBox>
+
+    <!-- Back button centered at bottom -->
+    <HBox layoutX="0" layoutY="460" prefWidth="800" alignment="CENTER">
+        <Button fx:id="backButton" text="Back"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-background-radius: 6;"
+                prefWidth="120" onAction="#handleBack"/>
+    </HBox>
+
+</AnchorPane>

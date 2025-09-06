@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:controller="controller.SuccessController" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #fdf6e3;">
+
+
+    <VBox alignment="CENTER" spacing="20" layoutX="150" layoutY="120" prefWidth="500">
+
+        <Label text="Reservation Confirmed!"
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2e8b57;" />
+
+        <Label text="Thank you for booking with US. A confirmation email has been sent."
+               wrapText="true" textAlignment="CENTER"
+               style="-fx-font-size: 15px; -fx-text-fill: #444444;" />
+
+
+        <VBox spacing="12" alignment="CENTER">
+
+
+            <HBox spacing="20" alignment="CENTER"
+                  style="-fx-background-color: #ffffff; -fx-padding: 12px; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, lightgray, 2, 0, 0, 1);"
+                  prefWidth="420">
+                <Label fx:id="checkInLabel" text="📅 Check-in: July 22, 2025" style="-fx-font-size: 13px;" />
+                <Label fx:id="checkOutLabel" text="⏰ Check-out: July 27, 2025" style="-fx-font-size: 13px;" />
+            </HBox>
+
+
+            <HBox spacing="20" alignment="CENTER"
+                  style="-fx-background-color: #ffffff; -fx-padding: 12px; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, lightgray, 2, 0, 0, 1);"
+                  prefWidth="420">
+                <Label  fx:id="guestNameLabel" text="👤 Guest: John Doe" style="-fx-font-size: 13px;" />
+                <Label fx:id="guestIdLabel" text="🆔 ID: #AP-2025-789456" style="-fx-font-size: 13px;" />
+            </HBox>
+
+
+            <HBox spacing="10" alignment="CENTER"
+                  style="-fx-background-color: #ffffff; -fx-padding: 12px; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, lightgray, 2, 0, 0, 1);"
+                  prefWidth="420">
+                <Label fx:id="emailLabel" text="Email: john.doe@gmail.com" style="-fx-font-size: 13px;" />
+            </HBox>
+
+        </VBox>
+
+
+    </VBox>
+
+    <HBox spacing="20" alignment="CENTER"
+          layoutX="200" layoutY="520" prefWidth="400">
+
+        <Button fx:id="newBookingBtn" text="🔁 New Booking"
+                style="-fx-background-color: #43a047; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
+                prefWidth="180" onAction="#handleNewBooking"/>
+
+        <Button fx:id="backToHomeBtn" text="🏠 Back to Home"
+                style="-fx-background-color: #1976d2; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
+                prefWidth="180" onAction="#handleBackToHome"/>
+    </HBox>
+</AnchorPane>
