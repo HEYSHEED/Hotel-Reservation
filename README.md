@@ -11,7 +11,7 @@ Database Integration: SQLite with normalized schema, designed using ERD & UML di
 
 Scalability: Supports growth to hundreds of reservations without schema changes.
 
-# Testing & Quality:
+# Testing & Quality
 
 1- JUnit tests with 90% coverage of core reservation logic.
 
